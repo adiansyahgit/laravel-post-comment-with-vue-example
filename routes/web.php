@@ -17,6 +17,3 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-// PostController
-Route::resource('posts', PostController::class, ['except' => ['store', 'update', 'destroy']]);
