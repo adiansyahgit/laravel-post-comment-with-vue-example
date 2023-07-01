@@ -76,7 +76,7 @@
                     <svg class="nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                     </svg> Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('posts.index') }}">
+            <li class="nav-item"><a class="nav-link" href="">
                     <svg class="nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
                     </svg> Post</a></li>
