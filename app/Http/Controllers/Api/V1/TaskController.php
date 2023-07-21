@@ -11,17 +11,12 @@ use App\Http\Resources\TaskResource;
 class TaskController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->authorizeResource(Task::class);
-    }
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return TaskResource::collection(auth()->user()->tasks()->get());
+        return TaskResource::collection(Task::get());
     }
 
     /**
@@ -29,7 +24,7 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        $task = $request->user()->tasks()->create($request->validated());
+        $task = Task::create($request->validated());
         return TaskResource::make($task);
     }
 

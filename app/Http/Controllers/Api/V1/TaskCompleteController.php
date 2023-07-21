@@ -14,7 +14,6 @@ class TaskCompleteController extends Controller
      */
     public function __invoke(Request $request, Task $task)
     {
-        $this->authorize('update', $task);
         $task->is_complete = $request->is_complete;
         $task->save();
 
